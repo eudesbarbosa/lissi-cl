@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Parameters>
+	<Settings>
+		<set id="LocalFolder">
+			<!-- Select local folder -->
+			<folder>/home/path/LISSI/run</folder>
+		</set>
+		<set id="CPU">
+			<cpu>4</cpu>
+		</set>
+		<set id="Blast">
+			<!-- Set BLAST binaries folder -->
+			<folder>/usr/bin/</folder>
+		</set>
+		<set id="R">
+			<!-- Set R binaries folder -->
+			<folder>/usr/bin/</folder>
+		</set>
+	</Settings>
+	<Parameters>
+		<set id="Genomes">
+			<LifestyleOne name="One" folder="/path/to/genomes/lifestyle/one" />
+			<LifestyleTwo name="Two" folder="/path/to/genomes/lifestyle/two" />
+		</set>
+		<!-- Insert path to previously generated results in 'file' sections [optional] -->
+		<set id="Homology">
+			<Blast evalue="0.001" file="" />
+			<TransClust density="35" file="" />	
+		</set>
+		<!-- Insert path to previously generated results in 'file' sections [optional] -->
+		<set id="Island">
+			<!-- To ignore island detection let all values to empty -->
+			<Gecko minOrganisms="2" minSize="8" indels="1" file="2" />
+		</set>
+		<set id="Statistics">
+			<RandomForest k="5" runs= "10" trees="500" />
+		</set>
+	</Parameters>
+</Parameters>
